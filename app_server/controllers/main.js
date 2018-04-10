@@ -1,5 +1,5 @@
 module.exports.index = function(req,res){
-	res.render('index',{title:'I love my wifey'});
+	res.render('locations-list',{title:'I love my wifey'});
 };
 
 
