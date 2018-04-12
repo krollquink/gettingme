@@ -1,0 +1,81 @@
+extends layout
+
+block content
+   .row.page-header
+    .col-lg-12
+      h1 Starcups
+   .row
+     .col-xs-12.col-md-9
+       .row
+         .col-xs-12.col-sm-6
+           p.rating
+              span.glyphicon.glyphicon-star
+              span.glyphicon.glyphicon-star
+              span.glyphicon.glyphicon-star
+              span.glyphicon.glyphicon-star-empty
+              span.glyphicon.glyphicon-star-empty
+           p.address Yokohama,Kanagawa
+            .panel.panel-primary
+              .panel-heading
+                h2.panel-title Opening hours
+              .panel-heading
+                p Monday - Friday  : 7.00 p.m - 7.00 p.m
+                p Sunday : 8.00 p.m - 5.00 p.m
+                p Saturday : closed
+            .panel.panel-primary
+              .panel-heading
+                h2.panel-title Facilities
+              .panel-body
+                span.label.label-warning
+                  span.glyphicon.glyphicon-ok
+                  | &nbsp; Hot drinks
+                |&nbsp;
+                span.label.label-warning
+                  span.glyphicon.glyphicon-ok
+                  | &nbsp; Food
+                |&nbsp;
+                span.label.label-warning
+                  span.glyphicon.glyphicon-ok
+                  | &nbsp; Premium wifi
+                |&nbsp;
+         .col-xs-12.col-sm-6.location-map
+            .panel.panel-primary
+              .panel-heading
+                h2.panel-title Location Maps
+              .panel-body
+                img.img-responsive.img-rounded(src='http://maps.googleapis.com/maps/api/staticmap?center=51.455041,-0.9690884&zoom=17&size=400x350&sensor=false&markers=51.455041,-0.9690884&scale=2')
+       .row
+         .col-xs-12
+           .panel.panel-primary.review-panel
+             .panel-heading
+               a.btn.btn-default.pull-right(href='/locations/review/new') Add Review
+               h2.panel-title Customer Reviews
+             .panel-body.review-container
+               .row
+                 .review
+                    .well.well-sm.review-header
+                     span.rating
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                     span.reviewAuthor Khairul Anuar
+                     small.reviewTimestamp 16 June 2013
+                    .col-xs-12
+                      p It was okay 
+               .row
+                 .review
+                    .well.well-sm.review-header
+                     span.rating
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                      span.glyphicon.glyphicon-star
+                     span.reviewAuthor Khairul Anuar
+                     small.reviewTimestamp 16 June 2013
+                    .col-xs-12
+                      p It was okay 
+     .col-xs-12.col-sm-3
+        p.lead Looking for wifi and a seat? Loc8r helps you find places to workwhen out and about. Perhaps with coffee, cake or a pint? Let Loc8r help you find the place you're looking for.
