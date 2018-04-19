@@ -1,0 +1,74 @@
+
+db.locations.save({
+name: 'MyCaffe',
+address: 'Yokohama Japan',
+rating: 2,
+facilities: ['Pizza', 'New table ', 'Free Wifi'],
+coords: [-0.9690884, 51.455041],
+openingTimes: [{
+days: 'Monday - Thursday',
+opening: '7:00am',
+closing: '7:00pm',
+closed: false
+}, {
+days: 'Saturday',
+opening: '8:00am',
+closing: '5:00pm',
+closed: false
+}, {
+days: 'Sunday',
+closed: true
+}]
+})
+
+db.locations.save({
+name: 'DUBUDUBU',
+address: 'England,London',
+rating: 5,
+facilities: ['Britain', 'New Waiter', 'Unlimited Wifi'],
+coords: [-0.9690884, 51.455041],
+openingTimes: [{
+days: 'Tuesday - Thursday',
+opening: '8:00am',
+closing: '9:00pm',
+closed: false
+}, {
+days: 'Saturday',
+opening: '8:00am',
+closing: '5:00pm',
+closed: false
+}, {
+days: 'Sunday',
+closed: true
+}]
+})
+
+
+
+db.locations.update({
+name: 'MyCaffe'
+}, {
+$push: {
+reviews: {
+author: 'Khanna',
+id: ObjectId(),
+rating: 3,
+timestamp: new Date("Jul 16, 2013"),
+reviewText: "I love whatever served here"
+}
+}
+})
+
+db.locations.update({
+name: 'DUBUDUBU	'
+}, {
+$push: {
+reviews: {
+author: 'Anna',
+id: ObjectId(),
+rating: 8,
+timestamp: new Date("Jul 16, 2013"),
+reviewText: "DONT TRY TO EAT ANYTHING HERE"
+}
+}
+})

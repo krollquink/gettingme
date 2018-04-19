@@ -37,3 +37,5 @@ gracefulShutdown('Heroku app shutdown', function () {
 process.exit(0);
 });
 });
+
+require('./locations');
